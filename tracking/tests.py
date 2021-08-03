@@ -22,11 +22,12 @@ class TrackingTests(APITestCase):
             "tracking_number": self.tracking_number,
             "order_id": self.order_id,
         }
-        print("data", data)
+        # print("data", data)
         response = client.post(url, data, format='json')
-        print(response)
-        print("response", response)
+        # print(response)
+        # print("response", response)
         eq_(response.status_code, status.HTTP_201_CREATED)
+        print("response", response)
 
     def test_get_data_(self):
 
